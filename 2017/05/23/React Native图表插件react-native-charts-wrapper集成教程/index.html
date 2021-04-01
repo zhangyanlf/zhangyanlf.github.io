@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>React Native图表插件react-native-charts-wrapper集成教程 | zhangyanlf</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="全栈进阶之路">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="React Native图表插件react-native-charts-wrapper集成教程 | zhangyanlf">
+    <meta name="twitter:description" content="全栈进阶之路">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="React Native图表插件react-native-charts-wrapper集成教程 | zhangyanlf">
+    <meta property="og:description" content="全栈进阶之路">
+
+    
+    <meta name="author" content="zhangyanlf">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="zhangyanlf" href="/atom.xml">
+    
+
+    <link rel="canonical" href="https://zhangyanlf.top/2017/05/23/React Native图表插件react-native-charts-wrapper集成教程/"/>
+
+                 
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-James.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 zhangyanlf 的主页"><img src="/images/logo.png" width="80" alt="zhangyanlf logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for zhangyanlf">zhangyanlf</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">iOS、Android、React/React-Native</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">全栈进阶之路</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="http://blog.csdn.net/sinat_34380438">CSDN</a></li>
+            
+              <li class="navigation__item"><a href="https://github.com/zhangyanlf">时光机</a></li>
+            
+              <li class="navigation__item"><a href="/about.html">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/zhangyanlf" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  <li class="navigation__item">
+    <a href="https://twitter.com/zhangyanlf" title="上Twitter找我" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-slate"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-05-22T16:00:00.000Z" class="post-list__meta--date date">2017-05-23</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/React-Native/">React Native</a>
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">React Native图表插件react-native-charts-wrapper集成教程</h1>
+  </header>
+
+  <section class="post">
+    <p>最近公司项目要用到图标显示，在网上找了好多天找到react-native-charts-wrapper，这款第三方图形很全，功能也很强大，就和大家一起分享下使用心得:(iOS端)，好了，话不多说，接下来开始一步一步集成图表插件react-native-charts-wrapper：<br><img src="http://img.blog.csdn.net/20170523103521051?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br><a href="https://github.com/wuxudong/react-native-charts-wrapper" target="_blank" rel="noopener">react-native-charts-wrapper GitHub地址</a></p>
+<h2 id="1-新建一个项目"><a href="#1-新建一个项目" class="headerlink" title="1.新建一个项目"></a>1.新建一个项目</h2><p><img src="http://img.blog.csdn.net/20170523131238816?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>出现下面界面时，说明项目已经创建成功：</p>
+<p><img src="http://img.blog.csdn.net/20170523131338128?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="2-安装react-native-charts-wrapper-（注意：一定要在根目录下安装）"><a href="#2-安装react-native-charts-wrapper-（注意：一定要在根目录下安装）" class="headerlink" title="2.安装react-native-charts-wrapper （注意：一定要在根目录下安装）"></a>2.安装react-native-charts-wrapper （注意：一定要在根目录下安装）</h2><p>进入项目根目录执行 npm install –save react-native-charts-wrapper</p>
+<p><img src="http://img.blog.csdn.net/20170523132007528?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="3-把该目录下ZylCharts-node-modules-react-native-charts-wrapper-ReactNativeCharts的整个ReactNativeCharts文件夹-拖入到项目中"><a href="#3-把该目录下ZylCharts-node-modules-react-native-charts-wrapper-ReactNativeCharts的整个ReactNativeCharts文件夹-拖入到项目中" class="headerlink" title="3.把该目录下ZylCharts/node_modules/react-native-charts-wrapper/ReactNativeCharts的整个ReactNativeCharts文件夹,拖入到项目中"></a>3.把该目录下ZylCharts/node_modules/react-native-charts-wrapper/ReactNativeCharts的整个ReactNativeCharts文件夹,拖入到项目中</h2><p><img src="http://img.blog.csdn.net/20170523132744086?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20170523132832451?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>拖入后：</p>
+<p><img src="http://img.blog.csdn.net/20170523132904603?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="4-Add-Bridge-File：因为后面会用到SwiftyJSONandiOS-Charts-这是用Swift写的，所以我们需要一个桥接文件，方法如下："><a href="#4-Add-Bridge-File：因为后面会用到SwiftyJSONandiOS-Charts-这是用Swift写的，所以我们需要一个桥接文件，方法如下：" class="headerlink" title="4.Add Bridge File：因为后面会用到SwiftyJSONandiOS Charts,这是用Swift写的，所以我们需要一个桥接文件，方法如下："></a>4.Add Bridge File：因为后面会用到SwiftyJSONandiOS Charts,这是用Swift写的，所以我们需要一个桥接文件，方法如下：</h2><p>新建一个工程名-Bridging-Header.h头文件(注意，必须是工程名开头！！！)：</p>
+<p><img src="http://img.blog.csdn.net/20170523133420984?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170523133548282?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170523133735689?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="5-接下来就需要使用我前面说的SwiftyJSONandiOS-Charts"><a href="#5-接下来就需要使用我前面说的SwiftyJSONandiOS-Charts" class="headerlink" title="5.接下来就需要使用我前面说的SwiftyJSONandiOS Charts"></a>5.接下来就需要使用我前面说的SwiftyJSONandiOS Charts</h2><p>这里已经下好了，链接地址： <a href="https://pan.baidu.com/s/1o7Y3oRg" target="_blank" rel="noopener">https://pan.baidu.com/s/1o7Y3oRg</a> 密码: 32j9</p>
+<p>下载下拉解压后，拖到iOS项目根目录下：</p>
+<p><img src="http://img.blog.csdn.net/20170523135047099?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="6-把刚刚的两个文件夹中的SwiftyJSON-xcodeproj-and-Charts-xcodeproj拖到工程的libraries中："><a href="#6-把刚刚的两个文件夹中的SwiftyJSON-xcodeproj-and-Charts-xcodeproj拖到工程的libraries中：" class="headerlink" title="6.把刚刚的两个文件夹中的SwiftyJSON.xcodeproj and Charts.xcodeproj拖到工程的libraries中："></a>6.把刚刚的两个文件夹中的SwiftyJSON.xcodeproj and Charts.xcodeproj拖到工程的libraries中：</h2><p><img src="http://img.blog.csdn.net/20170523135310883?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="7-接下来-gt-Build-Phases-gt-Link-Binary-With-Libraries添加SwiftyJSON-frameworkand-Charts-framework"><a href="#7-接下来-gt-Build-Phases-gt-Link-Binary-With-Libraries添加SwiftyJSON-frameworkand-Charts-framework" class="headerlink" title="7.接下来-&gt; Build Phases -&gt;Link Binary With Libraries添加SwiftyJSON.frameworkand Charts.framework."></a>7.接下来-&gt; Build Phases -&gt;Link Binary With Libraries添加SwiftyJSON.frameworkand Charts.framework.</h2><p><img src="http://img.blog.csdn.net/20170523135507338?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="8-添加SwiftyJSON-frameworkand-Charts-framework-到-Embedded-Binaries"><a href="#8-添加SwiftyJSON-frameworkand-Charts-framework-到-Embedded-Binaries" class="headerlink" title="8.添加SwiftyJSON.frameworkand Charts.framework 到 Embedded Binaries."></a>8.添加SwiftyJSON.frameworkand Charts.framework 到 Embedded Binaries.</h2><p><img src="http://img.blog.csdn.net/20170523135652932?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后：Edit -&gt; Convert -&gt; To Current Swift Syntax…</p>
+<p><img src="http://img.blog.csdn.net/20170523133958164?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170523150624015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>完成之后点击save。</p>
+<p>接下来在桥文件里面添加：</p>
+<p><img src="http://img.blog.csdn.net/20170523134236948?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="9-到这里配置已经完成，花键-b变一下程序："><a href="#9-到这里配置已经完成，花键-b变一下程序：" class="headerlink" title="9.到这里配置已经完成，花键+b变一下程序："></a>9.到这里配置已经完成，花键+b变一下程序：</h2><p>遇到错误：<br>1.Command /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1<br>  2.Command /usr/bin/ditto failed with exit code 1<br>原因：运行从网下下载的swift项目的时候，基本上都会出现这个错误。意思是找不到项目文件。<br>解决方法：直接忽略，运行程序就好。</p>
+<p>这样就配置好了，项目中的报错也就解决了！</p>
+<p>##下面就根据react-native-charts-wrapper文档示例代码，写个柱形图。</p>
+<p>index.ios.js:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  StyleSheet,</span><br><span class="line">  Text,</span><br><span class="line">  View</span><br><span class="line">&#125; from &apos;react-native&apos;;</span><br><span class="line"></span><br><span class="line">import ZylChartScreen from &apos;./ZylChartScreen&apos;;</span><br><span class="line"></span><br><span class="line">export default class ZylCharts extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line"></span><br><span class="line">              &lt;ZylChartScreen /&gt;</span><br><span class="line"></span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">AppRegistry.registerComponent(&apos;ZylCharts&apos;, () =&gt; ZylCharts);</span><br></pre></td></tr></table></figure>
+<p>ZylChartScreen.js:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by zhangyanlf on 17/5/23.</span><br><span class="line"> */</span><br><span class="line">import React from &apos;react&apos;;</span><br><span class="line">import &#123;</span><br><span class="line">    AppRegistry,</span><br><span class="line">    StyleSheet,</span><br><span class="line">    Text,</span><br><span class="line">    View,</span><br><span class="line">    processColor</span><br><span class="line">&#125; from &apos;react-native&apos;;</span><br><span class="line"></span><br><span class="line">import &#123;BarChart&#125; from &apos;react-native-charts-wrapper&apos;;</span><br><span class="line"></span><br><span class="line">class ZylBarChartScreen extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    constructor() &#123;</span><br><span class="line">        super();</span><br><span class="line"></span><br><span class="line">        this.state = &#123;</span><br><span class="line">            legend: &#123;</span><br><span class="line">                enabled: true,</span><br><span class="line">                textSize: 14,</span><br><span class="line">                form: &apos;SQUARE&apos;,</span><br><span class="line">                formSize: 14,</span><br><span class="line">                xEntrySpace: 10,</span><br><span class="line">                yEntrySpace: 5,</span><br><span class="line">                formToTextSpace: 5,</span><br><span class="line">                wordWrapEnabled: true,</span><br><span class="line">                maxSizePercent: 0.5</span><br><span class="line">            &#125;,</span><br><span class="line">            data: &#123;</span><br><span class="line">                dataSets: [&#123;</span><br><span class="line">                    values: [&#123;y: 100&#125;,</span><br><span class="line">                            &#123;y: 105&#125;,</span><br><span class="line">                            &#123;y: 102&#125;,</span><br><span class="line">                            &#123;y: 110&#125;,</span><br><span class="line">                            &#123;y: 114&#125;,</span><br><span class="line">                            &#123;y: 109&#125;,</span><br><span class="line">                            &#123;y: 105&#125;,</span><br><span class="line">                            &#123;y: 99&#125;,</span><br><span class="line">                            &#123;y: 95&#125;],</span><br><span class="line">                    label: &apos;Bar dataSet&apos;,</span><br><span class="line">                    config: &#123;</span><br><span class="line">                        color: processColor(&apos;teal&apos;),</span><br><span class="line">                        barSpacePercent: 40,</span><br><span class="line">                        barShadowColor: processColor(&apos;lightgrey&apos;),</span><br><span class="line">                        highlightAlpha: 90,</span><br><span class="line">                        highlightColor: processColor(&apos;red&apos;),</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;],</span><br><span class="line">            &#125;,</span><br><span class="line">            xAxis: &#123;</span><br><span class="line">                valueFormatter: [&apos;Jan&apos;, &apos;Feb&apos;, &apos;Mar&apos;, &apos;Apr&apos;, &apos;May&apos;, &apos;Jun&apos;, &apos;Jul&apos;, &apos;Aug&apos;, &apos;Sep&apos;],</span><br><span class="line">                granularityEnabled: true,</span><br><span class="line">                granularity : 1,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    handleSelect(event) &#123;</span><br><span class="line">        let entry = event.nativeEvent</span><br><span class="line">        if (entry == null) &#123;</span><br><span class="line">            this.setState(&#123;...this.state, selectedEntry: null&#125;)</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            this.setState(&#123;...this.state, selectedEntry: JSON.stringify(entry)&#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;View style=&#123;&#123;flex: 1&#125;&#125;&gt;</span><br><span class="line">                &lt;View style=&#123;&#123;height:80,marginTop: 15&#125;&#125;&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;Text style=&#123;styles.entryStyle&#125;&gt; selected entry&lt;/Text&gt;</span><br><span class="line">                    &lt;Text style=&#123;styles.entryStyle&#125;&gt; &#123;this.state.selectedEntry&#125;&lt;/Text&gt;</span><br><span class="line">                &lt;/View&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                &lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">                    &lt;BarChart</span><br><span class="line">                        style=&#123;styles.chart&#125;</span><br><span class="line">                        data=&#123;this.state.data&#125;</span><br><span class="line">                        xAxis=&#123;this.state.xAxis&#125;</span><br><span class="line">                        animation=&#123;&#123;durationX: 2000&#125;&#125;</span><br><span class="line">                        legend=&#123;this.state.legend&#125;</span><br><span class="line">                        gridBackgroundColor=&#123;processColor(&apos;#ffffff&apos;)&#125;</span><br><span class="line">                        drawBarShadow=&#123;false&#125;</span><br><span class="line">                        drawValueAboveBar=&#123;true&#125;</span><br><span class="line">                        drawHighlightArrow=&#123;true&#125;</span><br><span class="line">                        onSelect=&#123;this.handleSelect.bind(this)&#125;</span><br><span class="line">                    /&gt;</span><br><span class="line">                &lt;/View&gt;</span><br><span class="line">            &lt;/View&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const styles = StyleSheet.create(&#123;</span><br><span class="line">    container: &#123;</span><br><span class="line">        flex: 1,</span><br><span class="line">        backgroundColor: &apos;#F5FCFF&apos;,</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    chart: &#123;</span><br><span class="line">        flex: 1</span><br><span class="line">    &#125;,</span><br><span class="line">    entryStyle: &#123;</span><br><span class="line">        color: &apos;orange&apos;,</span><br><span class="line">        alignItems: &apos;center&apos;,</span><br><span class="line">        justifyContent: &apos;center&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">export default ZylBarChartScreen;</span><br></pre></td></tr></table></figure>
+<p>效果图：<br><img src="http://img.blog.csdn.net/20170523165704391?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQzODA0Mzg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>ok，就先写一个柱形图，其他的以后有时间再继续学习！！!</p>
+
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">最近的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/07/31/React-Native集成JPush-react-native及应用设置Tags、Alias/" title="React-Native集成JPush-react-native及应用设置Tags、Alias（iOS/Android）">React-Native集成JPush-react-native及应用设置Tags、Alias（iOS/Android）</a></h2>
+                <p class="excerpt">
+                
+                最近项目中用到推送功能，且项目是以React-Native框架实现iOS、Android跨平台开发，自然而然就选择了极光实现推送功能，由于以前是iOS开发对Android了解的不很很深，在集成和设置别名等问题上也遇到些坑，现在就把集成步骤及遇到的问题分享出来，仅供大家参考，有什么问题也可以留言一起探
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-07-30T16:00:00.000Z" class="post-list__meta--date date">2017-07-31</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/React-Native/">React Native</a>
+</span><a class="btn-border-small" href="/2017/07/31/React-Native集成JPush-react-native及应用设置Tags、Alias/">继续阅读</a></div>
+                           
+            </div>
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/05/11/RN封装Tabbar/" title="React Native 封装Tabbar">React Native 封装Tabbar</a></h2>
+                <p class="excerpt">
+                
+                做个封装的Tabbar为了以后方便运用，同时也希望给初学者提供一点小小的帮助，闲话不多说了,开始工程！（兼容iOS及Android）。1.初始化项目导入图片资源，iOS直接导入Images.xcassets即可，Android导入src/mian/res下面，与Android导入资源方法一致。2.整
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-05-10T16:00:00.000Z" class="post-list__meta--date date">2017-05-11</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/React-Native/">React Native</a>
+</span><a class="btn-border-small" href="/2017/05/11/RN封装Tabbar/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2021 - 本站使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题,
+        由<a href="https://monniya.com ">@Monniya</a> 修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+    </span>
+  
+         <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+    
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+   
+</footer>
+
+
+        </div>
+    </div>
+
+     
+    
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+</body>
+</html>
