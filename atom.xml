@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangyanlf.top/"/>
-  <updated>2018-10-31T09:23:43.000Z</updated>
+  <updated>2021-04-10T05:46:44.622Z</updated>
   <id>https://zhangyanlf.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac M系列电脑 模拟器运行时 pods库 YYkit会出现错误</title>
+    <link href="https://zhangyanlf.top/2021/04/10/Mac%20M%E7%B3%BB%E5%88%97%E7%94%B5%E8%84%91%20%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%20pods%E5%BA%93%20YYkit%E5%BA%93%E6%8A%A5%E9%94%99/"/>
+    <id>https://zhangyanlf.top/2021/04/10/Mac M系列电脑 模拟器运行时 pods库 YYkit库报错/</id>
+    <published>2021-04-09T16:00:00.000Z</published>
+    <updated>2021-04-10T05:46:44.622Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ld: in /Users/xxxxxx/Desktop/xxxxxx/xxxxxx/Pods/YYKit/Vendor/WebP.framework/WebP(libwebpencode_la-config.o), building for iOS Simulator, but linking in object file built for iOS, for architecture arm64</span><br></pre></td></tr></table></figure><h4 id="1、project-项目中的-build-setting-和project-pods-中的-build-setting-加上"><a href="#1、project-项目中的-build-setting-和project-pods-中的-build-setting-加上" class="headerlink" title="1、project 项目中的 build setting 和project pods 中的 build setting 加上"></a>1、project 项目中的 build setting 和project pods 中的 build setting 加上</h4><p> “EXCLUDED_ARCHS[sdk=iphonesimulator*]” = arm64</p><h4 id="2、project-项目中的-build-setting-和project-pods-中的-build-setting-加上-Add-User-Defined-Setting-添加在VALID-ARCHS设置属性值为arm64"><a href="#2、project-项目中的-build-setting-和project-pods-中的-build-setting-加上-Add-User-Defined-Setting-添加在VALID-ARCHS设置属性值为arm64" class="headerlink" title="2、project 项目中的 build setting 和project pods 中的 build setting 加上 Add User-Defined Setting 添加在VALID_ARCHS设置属性值为arm64 "></a>2、project 项目中的 build setting 和project pods 中的 build setting 加上 Add User-Defined Setting 添加在VALID_ARCHS设置属性值为arm64 <img src="https://img-blog.csdnimg.cn/20210408231634296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM0MzgwNDM4,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></h4><h4 id="3、并在Pods-YYKit中-VALID-ARCHS-添加属性值X86-64"><a href="#3、并在Pods-YYKit中-VALID-ARCHS-添加属性值X86-64" class="headerlink" title="3、并在Pods YYKit中 VALID_ARCHS 添加属性值X86_64"></a>3、并在Pods YYKit中 VALID_ARCHS 添加属性值X86_64</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla
+      
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="https://zhangyanlf.top/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>隐私政策</title>
